@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MiTV en Linea - Descubre Series y Películas</title>
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <nav class="nav">
+        <div class="nav__container">
+          <div class="nav__brand">
+            <h1>MiTV en Linea</h1>
+          </div>
+          <ul class="nav__menu">
+            <li>
+              <a href="index.html" class="nav__link nav__link--active"
+                >Inicio</a
+              >
+            </li>
+            <li><a href="favorites.html" class="nav__link">Favoritos</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <main class="main">
+      <section class="hero">
+        <div class="container">
+          <div class="hero__content">
+            <h2 class="hero__title">Descubre tu próxima serie favorita</h2>
+            <p class="hero__subtitle">
+              Explora miles de series y películas con información detallada
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="search">
+        <div class="container">
+          <form class="search__form" id="searchForm">
+            <div class="search__input-group">
+              <input
+                type="text"
+                id="searchInput"
+                class="search__input"
+                placeholder="Busca series, películas o actores..."
+                required
+              />
+              <button type="submit" class="search__button">
+                <svg
+                  class="search__icon"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <circle cx="11" cy="11" r="8"></circle>
+                  <path d="m21 21-4.35-4.35"></path>
+                </svg>
+              </button>
+            </div>
+          </form>
+        </div>
+      </section>
+
+      <section class="results">
+        <div class="container">
+          <div id="loadingSpinner" class="loading" style="display: none">
+            <div class="spinner"></div>
+            <p>Buscando...</p>
+          </div>
+
+          <div id="errorMessage" class="error-message" style="display: none">
+            <p>Ha ocurrido un error al buscar. Por favor, intenta de nuevo.</p>
+          </div>
+
+          <div id="noResults" class="no-results" style="display: none">
+            <h3>No se encontraron resultados</h3>
+            <p>Intenta con otros términos de búsqueda</p>
+          </div>
+
+          <div id="searchResults" class="grid">
+            <!-- Los resultados se cargarán aquí dinámicamente -->
+          </div>
+        </div>
+      </section>
+
+      <section class="featured" id="featuredSection">
+        <div class="container">
+          <h2 class="section__title">Series Populares</h2>
+          <div id="featuredShows" class="grid">
+            <!-- Las series populares se cargarán aquí -->
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__content">
+          <p>
+            &copy; 2025 MiTV en Línea, Elaborada por Raúl Belloso Medina. Datos
+            proporcionados por
+            <a href="https://www.tvmaze.com" target="_blank">TVMaze API</a>
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="js/api.js"></script>
+    <script src="js/ui.js"></script>
+    <script src="js/favorites.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>

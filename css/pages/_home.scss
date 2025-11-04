@@ -1,0 +1,20 @@
+@use "../variables" as *;
+
+.results {
+  padding: $spacing-8 0;
+}
+
+.featured {
+  padding: $spacing-16 0;
+  background-color: $white;
+}
+
+.section__title {
+  font-size: $text-2xl;
+  margin-bottom: $spacing-8;
+  text-align: center;
+
+  @media (min-width: $md) {
+    font-size: $text-3xl;
+  }
+}

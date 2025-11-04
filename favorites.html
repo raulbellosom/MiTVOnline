@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Favoritos - MiTV en Linea</title>
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <nav class="nav">
+        <div class="nav__container">
+          <div class="nav__brand">
+            <h1><a href="index.html">MiTV en Linea</a></h1>
+          </div>
+          <ul class="nav__menu">
+            <li><a href="index.html" class="nav__link">Inicio</a></li>
+            <li>
+              <a href="favorites.html" class="nav__link nav__link--active"
+                >Favoritos</a
+              >
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <main class="main">
+      <section class="page-header">
+        <div class="container">
+          <h1 class="page-title">Mis Favoritos</h1>
+          <p class="page-subtitle">Series y películas que has guardado</p>
+        </div>
+      </section>
+
+      <section class="favorites">
+        <div class="container">
+          <div id="emptyFavorites" class="empty-state">
+            <div class="empty-state__content">
+              <h2>No tienes favoritos aún</h2>
+              <p>Explora series y añade tus favoritas para verlas aquí</p>
+              <a href="index.html" class="btn btn--primary">Explorar series</a>
+            </div>
+          </div>
+
+          <div id="favoritesGrid" class="grid">
+            <!-- Los favoritos se cargarán aquí -->
+          </div>
+
+          <div
+            class="favorites-actions"
+            id="favoritesActions"
+            style="display: none"
+          >
+            <button id="clearAllFavorites" class="btn btn--danger">
+              Limpiar todos los favoritos
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__content">
+          <p>
+            &copy; 2025 MiTV en Línea, Elaborada por Raúl Belloso Medina. Datos
+            proporcionados por
+            <a href="https://www.tvmaze.com" target="_blank">TVMaze API</a>
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="js/api.js"></script>
+    <script src="js/favorites.js"></script>
+    <script src="js/favorites-page.js"></script>
+  </body>
+</html>

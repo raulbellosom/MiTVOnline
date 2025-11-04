@@ -1,0 +1,108 @@
+@use "../variables" as *;
+
+.main {
+  min-height: calc(100vh - 140px);
+  padding-top: $spacing-8;
+  padding-bottom: $spacing-16;
+}
+
+.hero {
+  background: linear-gradient(135deg, $primary-color 0%, $primary-dark 100%);
+  color: $white;
+  padding: $spacing-20 0;
+  text-align: center;
+
+  &__content {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  &__title {
+    font-size: $text-3xl;
+    font-weight: 700;
+    margin-bottom: $spacing-6;
+    color: $white;
+
+    @media (min-width: $md) {
+      font-size: $text-4xl;
+    }
+  }
+
+  &__subtitle {
+    font-size: $text-lg;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 0;
+
+    @media (min-width: $md) {
+      font-size: $text-xl;
+    }
+  }
+}
+
+.search {
+  padding: $spacing-16 0;
+  background: linear-gradient(135deg, $primary-color 0%, $primary-dark 100%);
+
+  &__form {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  &__input-group {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+
+  &__input {
+    width: 100%;
+    padding: $spacing-4 $spacing-6;
+    padding-right: 60px;
+    font-size: $text-lg;
+    border: none;
+    border-radius: $radius-lg;
+    background-color: $white;
+    color: $text-primary;
+    box-shadow: $shadow-lg;
+    transition: all 0.3s ease;
+
+    &:focus {
+      outline: none;
+      box-shadow: $shadow-xl, 0 0 0 4px rgba(255, 255, 255, 0.3);
+    }
+
+    &::placeholder {
+      color: $text-muted;
+    }
+  }
+
+  &__button {
+    position: absolute;
+    right: $spacing-2;
+    padding: $spacing-3;
+    background-color: $primary-color;
+    color: $white;
+    border: none;
+    border-radius: $radius-md;
+    cursor: pointer;
+    transition: all 0.15s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &:hover {
+      background-color: $primary-dark;
+      transform: scale(1.05);
+    }
+
+    &:focus {
+      outline: none;
+      box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.5);
+    }
+  }
+
+  &__icon {
+    width: 20px;
+    height: 20px;
+  }
+}

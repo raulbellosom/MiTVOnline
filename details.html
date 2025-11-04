@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Detalles - TVMaze Explorer</title>
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <nav class="nav">
+        <div class="nav__container">
+          <div class="nav__brand">
+            <h1><a href="index.html">MiTV en Linea</a></h1>
+          </div>
+          <ul class="nav__menu">
+            <li><a href="index.html" class="nav__link">Inicio</a></li>
+            <li><a href="favorites.html" class="nav__link">Favoritos</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <main class="main">
+      <div id="loadingSpinner" class="loading" style="display: block">
+        <div class="spinner"></div>
+        <p>Cargando detalles...</p>
+      </div>
+
+      <div id="errorMessage" class="error-message" style="display: none">
+        <div class="container">
+          <h2>Error al cargar</h2>
+          <p>No se pudo cargar la información de esta serie.</p>
+          <a href="index.html" class="btn btn--primary">Volver al inicio</a>
+        </div>
+      </div>
+
+      <article id="showDetails" class="show-details" style="display: none">
+        <div class="show-details__hero">
+          <div class="container">
+            <div class="show-details__content">
+              <div class="show-details__poster">
+                <img id="showImage" src="" alt="" class="show-details__image" />
+                <div class="show-details__actions">
+                  <button id="favoriteButton" class="btn btn--secondary">
+                    <span class="btn__icon">♥</span>
+                    Añadir a favoritos
+                  </button>
+                  <a
+                    id="officialSite"
+                    href="#"
+                    target="_blank"
+                    class="btn btn--outline"
+                    style="display: none"
+                  >
+                    Sitio oficial
+                  </a>
+                </div>
+              </div>
+              <div class="show-details__info">
+                <h1 id="showTitle" class="show-details__title"></h1>
+                <div class="show-details__meta">
+                  <span id="showGenres" class="show-details__genres"></span>
+                  <span id="showRating" class="show-details__rating"></span>
+                  <span id="showStatus" class="show-details__status"></span>
+                </div>
+                <div id="showSummary" class="show-details__summary"></div>
+                <div class="show-details__extra-info">
+                  <div class="info-grid">
+                    <div class="info-item">
+                      <strong>Red:</strong>
+                      <span id="showNetwork"></span>
+                    </div>
+                    <div class="info-item">
+                      <strong>Estreno:</strong>
+                      <span id="showPremiered"></span>
+                    </div>
+                    <div class="info-item">
+                      <strong>Duración:</strong>
+                      <span id="showRuntime"></span>
+                    </div>
+                    <div class="info-item">
+                      <strong>Idioma:</strong>
+                      <span id="showLanguage"></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <section id="castSection" class="cast-section" style="display: none">
+        <div class="container">
+          <h2 class="section__title">Reparto Principal</h2>
+          <div id="castGrid" class="cast-grid">
+            <!-- El reparto se cargará aquí -->
+          </div>
+        </div>
+      </section>
+
+      <section
+        id="episodesSection"
+        class="episodes-section"
+        style="display: none"
+      >
+        <div class="container">
+          <h2 class="section__title">Episodios</h2>
+          <div class="episodes-controls">
+            <select id="seasonSelect" class="episodes-select">
+              <option value="">Seleccionar temporada</option>
+            </select>
+          </div>
+          <div id="episodesGrid" class="episodes-grid">
+            <!-- Los episodios se cargarán aquí -->
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__content">
+          <p>
+            &copy; 2025 MiTV en Línea, Elaborada por Raúl Belloso Medina. Datos
+            proporcionados por
+            <a href="https://www.tvmaze.com" target="_blank">TVMaze API</a>
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="js/api.js"></script>
+    <script src="js/favorites.js"></script>
+    <script src="js/details.js"></script>
+  </body>
+</html>

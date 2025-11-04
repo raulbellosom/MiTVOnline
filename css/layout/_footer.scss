@@ -1,0 +1,16 @@
+@use "../variables" as *;
+
+.footer {
+  background-color: $gray-900;
+  color: $white;
+  text-align: center;
+  padding: $spacing-8 0;
+
+  p {
+    margin: 0;
+  }
+
+  a {
+    color: $primary-color;
+  }
+}

@@ -1,0 +1,20 @@
+@use "../variables" as *;
+
+.favorites {
+  &__header {
+    text-align: center;
+    margin-bottom: $spacing-8;
+  }
+
+  &__empty {
+    text-align: center;
+    padding: $spacing-8;
+  }
+
+  &__actions {
+    display: flex;
+    justify-content: center;
+    gap: $spacing-4;
+    margin-bottom: $spacing-8;
+  }
+}

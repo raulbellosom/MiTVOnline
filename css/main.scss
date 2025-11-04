@@ -1,0 +1,22 @@
+// Variables globales (colores, espaciado, tipografía)
+@use "variables" as *;
+
+// Estilos base y reset
+@use "base";
+
+// Estructura de la página
+@use "layout/header";
+@use "layout/nav";
+@use "layout/main";
+@use "layout/footer";
+
+// Componentes reutilizables
+@use "components/buttons";
+@use "components/cards";
+@use "components/forms";
+@use "components/grid";
+
+// Estilos específicos de páginas
+@use "pages/home";
+@use "pages/details";
+@use "pages/favorites";
